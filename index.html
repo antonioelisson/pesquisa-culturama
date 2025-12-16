@@ -42,11 +42,14 @@
                     <br>
 
                     <label for="phoneNumber">Telefone</label>
-                    <input id="phoneNumber" type="tel" name="userPhoneNumber" id="" pattern="[0-9]{11}" placeholder="DDD + número sem espaço e hífen" title="18912341234">
+                    <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="99999999999" title="18912341234" aria-describedby="phoneHelp">
+                    <small id="phoneHelp">Preencha com 11 dígitos no formato: DDD + número sem espaço ou hífen</small>
                     <br>
 
                     <label for="image">Enviar foto</label>
-                    <input id="image" type="file" name="userImage" accept="image/*">
+                    <input id="image" type="file" name="userImage" accept="image/*" aria-describedby="imageHelp">
+                    <small id="imageHelp">Enviei uma foto no formato PNG ou JPEG</small>
+                    <br>
                 </fieldset> 
 
                 <fieldset>
@@ -200,8 +203,8 @@
                     <label for="getResult">Desejo receber o resultado por email</label>
                 </fieldset>
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
+                <button type="submit" aria-label="Enviar dados do formulário">Enviar</button>
+                <button type="reset" aria-label="Limpar dados do formulário">Limpar</button>
             </form>
         </section>
     </main>
