@@ -57,8 +57,8 @@
                 <br>
 
                 <label for="maritalStatus">Estado Civil</label>
-                <select id="maritalStatus" name="userMaritalStatus">
-                    <option value="notInformed">Selecione...</option>
+                <select id="maritalStatus" name="userMaritalStatus" required>
+                    <option value="" disabled selected>Selecione...</option>
                     <option value="casado">Casado</option>
                     <option value="solteiro">Solteiro</option>
                     <option value="divorciado">Divorciado</option>
@@ -68,6 +68,7 @@
                 <label for="state">Estado</label>
                 <select id="state" name="stateList" required>
 
+                    <option value="" disabled selected>Selecione...</option>
                     <option value="acre">Acre</option>
                     <option value="alagoas">Alagoas
                     </option>
@@ -159,9 +160,28 @@
 
                 <label for="favoriteColor">Cor favorita</label>
                 <input type="color" name="userFavoriteColor" id="favoriteColor">
-
             </fieldset>
 
+            <fieldset>
+                <legend>Escala de opnião</legend>
+
+                <p>O que você acha da qualidade do nosso serviço?</p>
+
+                <input id="otima" type="radio" value="otima" name="opniao">
+                <label for="otima">Ótima</label><br>
+
+                <input id="boa" type="radio" value="boa" name="opniao">
+                <label for="boa">Boa</label><br>
+
+                <input id="regular" type="radio" value="regular" name="opniao">
+                <label for="regular">Regular</label><br>
+
+                <input id="ruim" type="radio" value="ruim" name="opniao">
+                <label for="ruim">Ruim</label><br>
+
+                <label for="coment">Escreva um comentário:</label>
+                <textarea name="comentario" id="coment" placeholder="Digite aqui..."></textarea>
+            </fieldset>
 
 
             <button type="submit">Enviar</button>
